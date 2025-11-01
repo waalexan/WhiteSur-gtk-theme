@@ -38,6 +38,60 @@ source ~/.bashrc
 
 6 -
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+🧩 1. Instalar o plugin de autocomplete
+
+Execute no terminal:
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+🖋️ 2. Instalar o plugin de syntax highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+⚙️ 3. Ativar os plugins no ~/.zshrc
+
+Abra o arquivo:
+
+nano ~/.zshrc
+
+
+Procure a linha que começa com:
+
+plugins=(
+
+
+E edite para incluir os novos plugins, por exemplo:
+
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+
+
+(Pode manter outros plugins que já estavam.)
+
+🔄 4. Recarregar o Zsh
+source ~/.zshrc
+
+✅ 5. Testar
+
+Autocomplete: comece a digitar um comando que você já usou antes — sugestões aparecerão em cinza claro.
+
+Syntax Highlighting: erros de comando ficarão em vermelho; strings e argumentos terão cores diferentes.
+
+Se quiser, posso te mostrar como adicionar completar nomes de arquivos e opções de comandos (usando o zsh-completions) também. Deseja que eu inclua isso?
+
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 ---------------------------------
