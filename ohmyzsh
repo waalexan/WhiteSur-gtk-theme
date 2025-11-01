@@ -1,0 +1,70 @@
+1 -
+
+cd ~
+wget https://sourceforge.net/projects/zsh/files/latest/download -O zsh.tar.xz
+
+----------------------------------
+
+2 -
+
+tar -xf zsh.tar.xz
+cd zsh-*
+
+-----------------------------------
+
+3 -
+
+./configure --prefix=$HOME/.local
+make
+make install
+
+
+--------------------------------
+
+4 -
+
+Abre o teu ~/.bashrc e adiciona essa linha no final:
+
+export PATH="$HOME/.local/bin:$PATH"
+
+---------------------------------
+
+5 -
+
+source ~/.bashrc
+
+
+--------------------
+
+6 -
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+---------------------------------
+
+7 -
+
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+
+--------------------------
+
+8 -
+
+Agora edita o arquivo ~/.zshrc e troca a linha:
+
+ZSH_THEME="robbyrussell"
+
+
+por:
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+
+---------------------------
+
+9 -
+
+source ~/.zshrc
+
+
+
